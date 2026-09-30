@@ -1,0 +1,19 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv build
+      - run: uv run --isolated --no-project --with dist/*.whl python -c "from pav_bio import Pav, AsyncPav; print('ok')"
+      # Live tests call the real API; they run only when the repo has a PAV_API_KEY secret.
+      - if: env.PAV_API_KEY != ''
+        run: uv run --group dev pytest tests
+        env:
+          PAV_API_KEY: ${{ secrets.PAV_API_KEY }}
