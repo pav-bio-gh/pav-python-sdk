@@ -13,7 +13,7 @@ from .fda_record_record_type import FdaRecordRecordType
 class FdaRecord(UniversalBaseModel):
     record_key: str = pydantic.Field()
     """
-    Durable key built from FDA identifiers; use it with `GET /v1/fda/{record_key}`.
+    Durable key built from FDA identifiers; fetch the record with its type's get endpoint, e.g. `GET /v1/recalls/{record_key}`.
     """
 
     record_type: FdaRecordRecordType = pydantic.Field()

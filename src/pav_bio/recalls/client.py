@@ -134,7 +134,7 @@ class RecallsClient:
             api_key="YOUR_API_KEY",
         )
         client.recalls.get(
-            record_key="record_key",
+            record_key="recall:/safety/recalls-market-withdrawals-safety-alerts/kiriko-llc-issues-voluntary-nationwide-recall-a1-slim-due-undeclared-sibutramine-phenolphthalein-and",
         )
         """
         _response = self._raw_client.get(record_key, request_options=request_options)
@@ -278,7 +278,7 @@ class AsyncRecallsClient:
 
         async def main() -> None:
             await client.recalls.get(
-                record_key="record_key",
+                record_key="recall:/safety/recalls-market-withdrawals-safety-alerts/kiriko-llc-issues-voluntary-nationwide-recall-a1-slim-due-undeclared-sibutramine-phenolphthalein-and",
             )
 
 

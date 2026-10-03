@@ -139,7 +139,7 @@ class OrphanDesignationsClient:
             api_key="YOUR_API_KEY",
         )
         client.orphan_designations.get(
-            record_key="record_key",
+            record_key="orphan_designation:383",
         )
         """
         _response = self._raw_client.get(record_key, request_options=request_options)
@@ -288,7 +288,7 @@ class AsyncOrphanDesignationsClient:
 
         async def main() -> None:
             await client.orphan_designations.get(
-                record_key="record_key",
+                record_key="orphan_designation:383",
             )
 
 

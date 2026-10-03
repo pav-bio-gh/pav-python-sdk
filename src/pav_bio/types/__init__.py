@@ -14,6 +14,8 @@ if typing.TYPE_CHECKING:
     from .company_ticker import CompanyTicker
     from .deal import Deal
     from .deal_asset import DealAsset
+    from .deal_bounded_value import DealBoundedValue
+    from .deal_bounded_value_bound import DealBoundedValueBound
     from .deal_company import DealCompany
     from .deal_deal_type import DealDealType
     from .deal_detail import DealDetail
@@ -63,7 +65,6 @@ if typing.TYPE_CHECKING:
     from .program_summary import ProgramSummary
     from .program_summary_basis import ProgramSummaryBasis
     from .sponsor_ref import SponsorRef
-    from .stats import Stats
     from .target_term import TargetTerm
     from .trial import Trial
     from .trial_list_response import TrialListResponse
@@ -78,6 +79,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "CompanyTicker": ".company_ticker",
     "Deal": ".deal",
     "DealAsset": ".deal_asset",
+    "DealBoundedValue": ".deal_bounded_value",
+    "DealBoundedValueBound": ".deal_bounded_value_bound",
     "DealCompany": ".deal_company",
     "DealDealType": ".deal_deal_type",
     "DealDetail": ".deal_detail",
@@ -127,7 +130,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ProgramSummary": ".program_summary",
     "ProgramSummaryBasis": ".program_summary_basis",
     "SponsorRef": ".sponsor_ref",
-    "Stats": ".stats",
     "TargetTerm": ".target_term",
     "Trial": ".trial",
     "TrialListResponse": ".trial_list_response",
@@ -166,6 +168,8 @@ __all__ = [
     "CompanyTicker",
     "Deal",
     "DealAsset",
+    "DealBoundedValue",
+    "DealBoundedValueBound",
     "DealCompany",
     "DealDealType",
     "DealDetail",
@@ -215,7 +219,6 @@ __all__ = [
     "ProgramSummary",
     "ProgramSummaryBasis",
     "SponsorRef",
-    "Stats",
     "TargetTerm",
     "Trial",
     "TrialListResponse",

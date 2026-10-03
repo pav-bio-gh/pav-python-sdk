@@ -139,7 +139,7 @@ class PurpleBookProductsClient:
             api_key="YOUR_API_KEY",
         )
         client.purple_book_products.get(
-            record_key="record_key",
+            record_key="purple_book_product:101379:001",
         )
         """
         _response = self._raw_client.get(record_key, request_options=request_options)
@@ -288,7 +288,7 @@ class AsyncPurpleBookProductsClient:
 
         async def main() -> None:
             await client.purple_book_products.get(
-                record_key="record_key",
+                record_key="purple_book_product:101379:001",
             )
 
 

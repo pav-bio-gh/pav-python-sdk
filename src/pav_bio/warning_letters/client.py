@@ -134,7 +134,7 @@ class WarningLettersClient:
             api_key="YOUR_API_KEY",
         )
         client.warning_letters.get(
-            record_key="record_key",
+            record_key="warning_letter:/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/cocos-holistic-specialties-apothecary-612001-01042021",
         )
         """
         _response = self._raw_client.get(record_key, request_options=request_options)
@@ -278,7 +278,7 @@ class AsyncWarningLettersClient:
 
         async def main() -> None:
             await client.warning_letters.get(
-                record_key="record_key",
+                record_key="warning_letter:/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/cocos-holistic-specialties-apothecary-612001-01042021",
             )
 
 

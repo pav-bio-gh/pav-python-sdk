@@ -134,7 +134,7 @@ class CompleteResponseLettersClient:
             api_key="YOUR_API_KEY",
         )
         client.complete_response_letters.get(
-            record_key="record_key",
+            record_key="complete_response_letter:021164Orig1s000OtherActionLtrs.pdf",
         )
         """
         _response = self._raw_client.get(record_key, request_options=request_options)
@@ -278,7 +278,7 @@ class AsyncCompleteResponseLettersClient:
 
         async def main() -> None:
             await client.complete_response_letters.get(
-                record_key="record_key",
+                record_key="complete_response_letter:021164Orig1s000OtherActionLtrs.pdf",
             )
 
 
