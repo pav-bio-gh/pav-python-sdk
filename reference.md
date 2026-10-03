@@ -1616,7 +1616,7 @@ client = Pav(
 )
 
 client.orange_book_products.get(
-    record_key="record_key",
+    record_key="orange_book_product:N:209637:005",
 )
 
 ```
@@ -1843,7 +1843,7 @@ client = Pav(
 )
 
 client.orange_book_patents.get(
-    record_key="record_key",
+    record_key="orange_book_patent:N:209637:005:11318191:U-1852",
 )
 
 ```
@@ -2062,7 +2062,7 @@ client = Pav(
 )
 
 client.orange_book_exclusivities.get(
-    record_key="record_key",
+    record_key="orange_book_exclusivity:A:202387:001:PC:2026-11-24",
 )
 
 ```
@@ -2281,7 +2281,7 @@ client = Pav(
 )
 
 client.purple_book_products.get(
-    record_key="record_key",
+    record_key="purple_book_product:101379:001",
 )
 
 ```
@@ -2500,7 +2500,7 @@ client = Pav(
 )
 
 client.orphan_designations.get(
-    record_key="record_key",
+    record_key="orphan_designation:383",
 )
 
 ```
@@ -2711,7 +2711,7 @@ client = Pav(
 )
 
 client.warning_letters.get(
-    record_key="record_key",
+    record_key="warning_letter:/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/cocos-holistic-specialties-apothecary-612001-01042021",
 )
 
 ```
@@ -2922,7 +2922,7 @@ client = Pav(
 )
 
 client.recalls.get(
-    record_key="record_key",
+    record_key="recall:/safety/recalls-market-withdrawals-safety-alerts/kiriko-llc-issues-voluntary-nationwide-recall-a1-slim-due-undeclared-sibutramine-phenolphthalein-and",
 )
 
 ```
@@ -3344,7 +3344,7 @@ client = Pav(
 )
 
 client.complete_response_letters.get(
-    record_key="record_key",
+    record_key="complete_response_letter:021164Orig1s000OtherActionLtrs.pdf",
 )
 
 ```
@@ -3555,7 +3555,7 @@ client = Pav(
 )
 
 client.accelerated_approvals.get(
-    record_key="record_key",
+    record_key="accelerated_approval:ac13ec51004a44f8",
 )
 
 ```
@@ -3766,7 +3766,7 @@ client = Pav(
 )
 
 client.advisory_committee_meetings.get(
-    record_key="record_key",
+    record_key="advisory_committee_meeting:/advisory-committees/advisory-committee-calendar/january-12-2016-meeting-psychopharmacologic-drugs-advisory-committee-meeting-announcement-01112016",
 )
 
 ```
@@ -3787,70 +3787,6 @@ client.advisory_committee_meetings.get(
     
 </dd>
 </dl>
-
-<dl>
-<dd>
-
-**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
-    
-</dd>
-</dl>
-</dd>
-</dl>
-
-
-</dd>
-</dl>
-</details>
-
-## stats
-<details><summary><code>client.stats.<a href="src/pav_bio/stats/client.py">get</a>() -> Stats</code></summary>
-<dl>
-<dd>
-
-#### 📝 Description
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-Counts of active programs and companies, by phase and by modality.
-</dd>
-</dl>
-</dd>
-</dl>
-
-#### 🔌 Usage
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-```python
-from pav_bio import Pav
-from pav_bio.environment import PavEnvironment
-
-client = Pav(
-    api_key="<token>",
-    environment=PavEnvironment.PRODUCTION,
-)
-
-client.stats.get()
-
-```
-</dd>
-</dl>
-</dd>
-</dl>
-
-#### ⚙️ Parameters
-
-<dl>
-<dd>
 
 <dl>
 <dd>

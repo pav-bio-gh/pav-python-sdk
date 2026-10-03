@@ -83,7 +83,7 @@ class PatentFamily(UniversalBaseModel):
 
     members: typing.Optional[typing.List[PatentFamilyMember]] = pydantic.Field(default=None)
     """
-    Member applications, newest filed first. Present with `include_members=true`.
+    Up to 30 member applications, newest filed first. Omitted with `view=slim`.
     """
 
     if IS_PYDANTIC_V2:

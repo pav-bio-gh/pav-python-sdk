@@ -20,7 +20,7 @@ class DrugListResponse(UniversalBaseModel):
 
     total: typing.Optional[int] = pydantic.Field(default=None)
     """
-    Rows matching the filters. Null for relevance-ranked `q` results.
+    Rows matching the filters, across all pages.
     """
 
     if IS_PYDANTIC_V2:

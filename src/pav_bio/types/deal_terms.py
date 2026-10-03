@@ -4,6 +4,7 @@ import typing
 
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
+from .deal_bounded_value import DealBoundedValue
 from .deal_value import DealValue
 
 
@@ -21,6 +22,11 @@ class DealTerms(UniversalBaseModel):
     upfront: typing.Optional[DealValue] = pydantic.Field(default=None)
     """
     Upfront consideration.
+    """
+
+    upfront_and_near_term: typing.Optional[DealBoundedValue] = pydantic.Field(default=None)
+    """
+    One stated amount that combines the upfront with near-term payments, equity or other consideration, set only when no separate upfront is stated.
     """
 
     equity: typing.Optional[DealValue] = pydantic.Field(default=None)

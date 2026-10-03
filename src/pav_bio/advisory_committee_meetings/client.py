@@ -134,7 +134,7 @@ class AdvisoryCommitteeMeetingsClient:
             api_key="YOUR_API_KEY",
         )
         client.advisory_committee_meetings.get(
-            record_key="record_key",
+            record_key="advisory_committee_meeting:/advisory-committees/advisory-committee-calendar/january-12-2016-meeting-psychopharmacologic-drugs-advisory-committee-meeting-announcement-01112016",
         )
         """
         _response = self._raw_client.get(record_key, request_options=request_options)
@@ -278,7 +278,7 @@ class AsyncAdvisoryCommitteeMeetingsClient:
 
         async def main() -> None:
             await client.advisory_committee_meetings.get(
-                record_key="record_key",
+                record_key="advisory_committee_meeting:/advisory-committees/advisory-committee-calendar/january-12-2016-meeting-psychopharmacologic-drugs-advisory-committee-meeting-announcement-01112016",
             )
 
 

@@ -139,7 +139,7 @@ class OrangeBookProductsClient:
             api_key="YOUR_API_KEY",
         )
         client.orange_book_products.get(
-            record_key="record_key",
+            record_key="orange_book_product:N:209637:005",
         )
         """
         _response = self._raw_client.get(record_key, request_options=request_options)
@@ -288,7 +288,7 @@ class AsyncOrangeBookProductsClient:
 
         async def main() -> None:
             await client.orange_book_products.get(
-                record_key="record_key",
+                record_key="orange_book_product:N:209637:005",
             )
 
 

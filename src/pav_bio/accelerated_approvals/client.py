@@ -134,7 +134,7 @@ class AcceleratedApprovalsClient:
             api_key="YOUR_API_KEY",
         )
         client.accelerated_approvals.get(
-            record_key="record_key",
+            record_key="accelerated_approval:ac13ec51004a44f8",
         )
         """
         _response = self._raw_client.get(record_key, request_options=request_options)
@@ -278,7 +278,7 @@ class AsyncAcceleratedApprovalsClient:
 
         async def main() -> None:
             await client.accelerated_approvals.get(
-                record_key="record_key",
+                record_key="accelerated_approval:ac13ec51004a44f8",
             )
 
 

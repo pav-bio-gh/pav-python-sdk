@@ -144,7 +144,7 @@ class OrangeBookPatentsClient:
             api_key="YOUR_API_KEY",
         )
         client.orange_book_patents.get(
-            record_key="record_key",
+            record_key="orange_book_patent:N:209637:005:11318191:U-1852",
         )
         """
         _response = self._raw_client.get(record_key, request_options=request_options)
@@ -298,7 +298,7 @@ class AsyncOrangeBookPatentsClient:
 
         async def main() -> None:
             await client.orange_book_patents.get(
-                record_key="record_key",
+                record_key="orange_book_patent:N:209637:005:11318191:U-1852",
             )
 
 

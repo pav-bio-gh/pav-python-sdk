@@ -30,7 +30,6 @@ if typing.TYPE_CHECKING:
     from .programs.client import AsyncProgramsClient, ProgramsClient
     from .purple_book_products.client import AsyncPurpleBookProductsClient, PurpleBookProductsClient
     from .recalls.client import AsyncRecallsClient, RecallsClient
-    from .stats.client import AsyncStatsClient, StatsClient
     from .trials.client import AsyncTrialsClient, TrialsClient
     from .warning_letters.client import AsyncWarningLettersClient, WarningLettersClient
 
@@ -138,7 +137,6 @@ class Pav:
         self._complete_response_letters: typing.Optional[CompleteResponseLettersClient] = None
         self._accelerated_approvals: typing.Optional[AcceleratedApprovalsClient] = None
         self._advisory_committee_meetings: typing.Optional[AdvisoryCommitteeMeetingsClient] = None
-        self._stats: typing.Optional[StatsClient] = None
 
     @property
     def programs(self):
@@ -276,14 +274,6 @@ class Pav:
             self._advisory_committee_meetings = AdvisoryCommitteeMeetingsClient(client_wrapper=self._client_wrapper)
         return self._advisory_committee_meetings
 
-    @property
-    def stats(self):
-        if self._stats is None:
-            from .stats.client import StatsClient  # noqa: E402
-
-            self._stats = StatsClient(client_wrapper=self._client_wrapper)
-        return self._stats
-
 
 def _make_default_async_client(
     timeout: typing.Optional[float],
@@ -409,7 +399,6 @@ class AsyncPav:
         self._complete_response_letters: typing.Optional[AsyncCompleteResponseLettersClient] = None
         self._accelerated_approvals: typing.Optional[AsyncAcceleratedApprovalsClient] = None
         self._advisory_committee_meetings: typing.Optional[AsyncAdvisoryCommitteeMeetingsClient] = None
-        self._stats: typing.Optional[AsyncStatsClient] = None
 
     @property
     def programs(self):
@@ -548,14 +537,6 @@ class AsyncPav:
                 client_wrapper=self._client_wrapper
             )
         return self._advisory_committee_meetings
-
-    @property
-    def stats(self):
-        if self._stats is None:
-            from .stats.client import AsyncStatsClient  # noqa: E402
-
-            self._stats = AsyncStatsClient(client_wrapper=self._client_wrapper)
-        return self._stats
 
 
 def _get_base_url(*, base_url: typing.Optional[str] = None, environment: PavEnvironment) -> str:

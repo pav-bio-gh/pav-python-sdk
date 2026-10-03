@@ -90,14 +90,13 @@ def test_errors_are_typed(client: Pav) -> None:
         client.programs.list(phase=["phase_9"])
     assert "phase_9" in str(bad.value.body)
     with pytest.raises(UnauthorizedError):
-        Pav(base_url=BASE_URL, api_key="not-a-key").stats.get()
+        Pav(base_url=BASE_URL, api_key="not-a-key").companies.list(limit=1)
 
 
 def test_async_client() -> None:
     async def run() -> int:
         client = AsyncPav(base_url=BASE_URL, api_key=os.environ["PAV_API_KEY"])
-        stats = await client.stats.get()
         page = await client.companies.list(ticker=["PFE"], limit=1)
-        return stats.companies + len(page.items)
+        return len(page.items)
 
-    assert asyncio.run(run()) > 1
+    assert asyncio.run(run()) == 1
